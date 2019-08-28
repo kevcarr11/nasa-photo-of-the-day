@@ -9,7 +9,7 @@ function Heading() {
             </div>
             < Logo />
             <div className="rightHeadingContainer">
-                <h1 className="rightHeading">Media Production by Kevin Carr</h1>
+                <h1 className="rightHeading">Digital Production by Kevin Carr</h1>
             </div>
         </div>
     );
