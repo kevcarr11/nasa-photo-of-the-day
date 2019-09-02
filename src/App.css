@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: url(/src/img/nasa-V4ZksNimxLk-unsplash.jpg);
+  background-image: url(/src/img/nasa-V4ZksNimxLk-unsplash.jpg);
 }
 
 .App-logo {
@@ -49,6 +49,7 @@
   justify-content: center;
   margin-left: 10%;
   margin-right: 10%;
+  
 }
 
 .photoOfTheDayTitle{
