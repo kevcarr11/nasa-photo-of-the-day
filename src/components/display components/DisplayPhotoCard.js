@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
-    Card, CardImg, CardText, CardBody, CardLink,
+    Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
   } from 'reactstrap';
 
@@ -17,7 +16,6 @@ import {
           <CardImg width="100%" src={props.url} alt="Card image cap" />
           <CardBody>
             <CardText>{props.explanation}</CardText>
-            {/* <Link to="/mars-weather">Check out the weather on Mars</Link> */}
           </CardBody>
         </Card>
       </main>    
