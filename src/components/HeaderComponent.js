@@ -1,16 +1,25 @@
 import React from "react";
 import Logo from "./Logo";
+import {
+    Navbar,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+ } from 'reactstrap';
 
 function Heading() {
     return ( 
-        <div className="heading">
-            <div className="leftHeadingContainer">
-                <h1 className="leftHeading">Photos Provided by Nasa</h1>
-            </div>
-            < Logo />
-            <div className="rightHeadingContainer">
-                <h1 className="rightHeading">Digital Production by Kevin Carr</h1>
-            </div>
+        <div className="">
+            <Navbar color="light" light expand="md">
+            <NavbarBrand href="/">Nasa Photo Of The Day</NavbarBrand>
+            <Logo/>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink>Media Production By Kevin Carr</NavLink>
+              </NavItem>
+            </Nav>
+            </Navbar>
         </div>
     );
 };

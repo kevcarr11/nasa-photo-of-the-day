@@ -3,6 +3,9 @@ import Heading from "./components/HeaderComponent";
 import "./App.css";
 import DisplayPhotoCard from "./components/display components/DisplayPhotoCard";
 import axios from "axios";
+// import { Route } from "react-router-dom";
+// import Carousel from "./components/display components/Mars";
+
 
 
 function App() {
@@ -30,7 +33,6 @@ function App() {
     )
   }
 
-
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=zLWuVoRtJ7Fq08DkWaM8PrU7uf5UNfmfFaW430YA&date=${date}`)
     .then(res => {
@@ -53,7 +55,9 @@ function App() {
       date={data.date} />
     : <h3>Loading...</h3>
     } 
+    {/* <Route to="/mars-weather" component={ Carousel }/> */}
     </div>
+    
   );
 }
 

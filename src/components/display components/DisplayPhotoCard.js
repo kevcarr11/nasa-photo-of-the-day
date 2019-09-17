@@ -1,14 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import {
+    Card, CardImg, CardText, CardBody, CardLink,
+    CardTitle, CardSubtitle
+  } from 'reactstrap';
 
 
  const DisplayPhotoCard = (props) => {
     return (
-        <div>
-            <h2>TITLE: {props.title}</h2>
-            <h3>DATE: {props.date}</h3>
-            <img src={props.url} alt="nasa pic of the day" />
-            <p>{props.explanation}</p>
-        </div> 
+        <main>
+        <Card>
+          <CardBody>
+            <CardTitle>TITLE: {props.title}</CardTitle>
+            <CardSubtitle>DATE: {props.date}</CardSubtitle>
+          </CardBody>
+          <CardImg width="100%" src={props.url} alt="Card image cap" />
+          <CardBody>
+            <CardText>{props.explanation}</CardText>
+            {/* <Link to="/mars-weather">Check out the weather on Mars</Link> */}
+          </CardBody>
+        </Card>
+      </main>    
     );
 }
 
