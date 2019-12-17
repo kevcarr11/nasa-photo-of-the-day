@@ -16,8 +16,8 @@ console.log(props.media_type)
     <main>
       <Card>
         <CardBody>
-          <CardTitle>TITLE: {props.title}</CardTitle>
-          <CardSubtitle>DATE: {props.date}</CardSubtitle>
+          <CardTitle className="subTitle" >{props.title}</CardTitle>
+          <CardSubtitle className="subTitle" >DATE: {props.date}</CardSubtitle>
         </CardBody>
         {props.media_type === "image" ? <CardImg width="100%" src={props.imageUrl} alt="Card image cap" /> : (
           <ReactPlayer
@@ -31,7 +31,7 @@ console.log(props.media_type)
         }
 
         <CardBody>
-          <CardText>{props.explanation}</CardText>
+          <CardText className="pText" >{props.explanation}</CardText>
         </CardBody>
       </Card>
     </main>

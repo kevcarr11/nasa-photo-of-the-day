@@ -28,8 +28,10 @@ function App() {
   const DatePicker = () => {
     return (
       <div>
-        <form >
-          Choose A Previous Date: <input onChange={(e) => setDate(e.target.value)} id="date-input" type="date" name="date-picker" max={today} ></input>
+        <form>
+          <label className="pText" >Choose a Date:
+          <input onChange={(e) => setDate(e.target.value)} id="date-input" type="date" name="date-picker" max={today} ></input>
+          </label>
         </form>
       </div>
     )
