@@ -25,6 +25,8 @@ console.log(props.media_type)
             playing
             loop
             width="100%"
+            volume="0"
+            muted
           />)
         }
 
