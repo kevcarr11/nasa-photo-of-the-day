@@ -13,6 +13,7 @@ function App() {
   const [image, setImage] = useState([])
   const [date, setDate] = useState('');
   const [video, setVideo] = useState("")
+  const [isLoading, setLoading] = useState(true)
 
   let d = new Date();
   function twoDigitDate(d) {
@@ -45,27 +46,32 @@ function App() {
           setData(res.data);
           setDate(date);
           setImage(res.data.url)
+          setLoading(false)
         } else {
           setVideo(res.data.url)
           setDate(date)
           setData(res.data)
-          console.log(res.data)
+          setLoading(false)
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err)
+        setLoading(false)
+      });
   }, [date]);
 
   return (
     <div className="App">
       <Heading />
       <DatePicker />
-      {data ? <DisplayPhotoCard title={data.title}
+      {!isLoading ? <DisplayPhotoCard title={data.title}
         url={data.url}
         imageUrl={image}
         videoUrl={video}
         media_type={data.media_type}
         explanation={data.explanation}
-        date={data.date} />
+        date={data.date}
+        isLoading={isLoading} />
         : <h3>Loading...</h3>
       }
     </div>

@@ -29,7 +29,6 @@ console.log(props.media_type)
             muted
           />)
         }
-
         <CardBody>
           <CardText className="pText" >{props.explanation}</CardText>
         </CardBody>
