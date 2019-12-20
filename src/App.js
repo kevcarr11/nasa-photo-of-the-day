@@ -12,10 +12,10 @@ function App() {
   const [video, setVideo] = useState("")
   const [isLoading, setLoading] = useState(true)
 
-
+ const API_KEY = process.env.REACT_APP_NASA_API_KEY
 
   useEffect(() => {
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=zLWuVoRtJ7Fq08DkWaM8PrU7uf5UNfmfFaW430YA&date=${date}`)
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`)
       .then(res => {
         if (res.data.media_type === "image") {
           setData(res.data);
