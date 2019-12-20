@@ -14,7 +14,7 @@ function DatePicker(props) {
   return (
     <div>
        <label className="pText" >Choose a Date:
-       <input onChange={(e) => props.setDate(e.target.value)} id="date-input" type="date" value={props.date || today} name="date-picker" max={today} ></input>
+       <input className="datePicker" onChange={(e) => props.setDate(e.target.value)} id="date-input" type="date" value={props.date || today} name="date-picker" max={today} ></input>
        </label>
     </div>
   )

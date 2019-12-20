@@ -16,7 +16,7 @@ function Heading() {
             <Logo/>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink>Media Production By Kevin Carr</NavLink>
+                <NavLink>Coded in React  By Kevin Carr</NavLink>
               </NavItem>
             </Nav>
             </Navbar>
