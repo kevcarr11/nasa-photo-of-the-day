@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set REACT_APP_ENV=production & react-scripts build",
+    "build": "set REACT_APP_NASA_API_KEY=production & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
