@@ -1,7 +1,7 @@
 import React from 'react'
 
 function DatePicker(props) {
-  
+
   let d = new Date();
   function twoDigitDate(d) {
     return ((d.getDate()).toString().length === 1) ? "0" + (d.getDate()).toString() : (d.getDate()).toString();
