@@ -23,8 +23,9 @@ const DisplayPhotoCard = (props) => {
             playing
             loop
             width="100%"
-            muted
-          />)
+            volume="0"
+          />
+        )
         }
         <CardBody>
           <CardText className="pText" >{props.data.explanation}</CardText>
