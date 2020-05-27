@@ -10,28 +10,25 @@ import {
 
 const DisplayPhotoCard = (props) => {
 
-
-console.log(props.media_type)
   return (
     <main>
       <Card>
         <CardBody>
-          <CardTitle>TITLE: {props.title}</CardTitle>
-          <CardSubtitle>DATE: {props.date}</CardSubtitle>
+          <CardTitle className="subTitle" >{props.data.title}</CardTitle>
+          {/* <CardSubtitle className="subTitle" >DATE: {props.date}</CardSubtitle> */}
         </CardBody>
-        {props.media_type === "image" ? <CardImg width="100%" src={props.imageUrl} alt="Card image cap" /> : (
+        {props.data.media_type === "image" ? <CardImg width="100%" src={props.imageUrl} alt="Card image cap" /> : (
           <ReactPlayer
             url={props.videoUrl}
             playing
             loop
             width="100%"
             volume="0"
-            muted
-          />)
+          />
+        )
         }
-
         <CardBody>
-          <CardText>{props.explanation}</CardText>
+          <CardText className="pText" >{props.data.explanation}</CardText>
         </CardBody>
       </Card>
     </main>
